@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg_color">
+
+    <include layout="@layout/activity_toolbar"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_tip"
+        android:textColor="@color/border_color"
+        android:textSize="12sp"
+        android:padding="@dimen/largePadding"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/largePadding">
+
+        <com.example.wushop.widget.ClearEditText
+            android:id="@+id/et_code"
+            style="@style/editText_base"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="请输入验证码"
+            android:inputType="number"
+            android:maxLength="4"/>
+
+        <Button
+            android:id="@+id/btn_reSend"
+            style="@style/smallGreenButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:enabled="true"
+            android:onClick="reSendCode"
+            android:text="@string/smssdk_resend_identify_code"
+            />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context=".activity.LoginActivity">
+
+    <include layout="@layout/activity_toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/selector_view_block"
+        android:padding="@dimen/largePadding"
+        android:orientation="vertical">
+
+        <com.example.wushop.widget.ClearEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_phonenumber"
+            android:hint="请输入手机号码"
+            android:text=""
+            style="@style/editText_base"
+            android:drawableLeft="@drawable/icon_telphone_32"
+            android:drawablePadding="20dp"
+            android:inputType="phone"/>
+
+        <View style="@style/line_horizontal"/>
+
+        <com.example.wushop.widget.ClearEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_password"
+            android:drawableLeft="@drawable/icon_lock_28"
+            style="@style/editText_base"
+            android:text=""
+            android:hint="请输入登录密码"
+            android:drawablePadding="20dp"
+            android:inputType="textPassword"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/bigRedButton"
+        android:id="@+id/btn_login"
+        android:text="@string/login"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_register"
+            android:layout_weight="1"
+            android:text="注册账号"
+            android:textColor="@color/blue"
+            android:textSize="16sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_forget_pwd"
+            android:layout_weight="1"
+            android:text="忘记密码"
+            android:textColor="@color/blue"
+            android:textSize="16sp"
+            android:gravity="right"/>
+    </LinearLayout>
+</LinearLayout>
